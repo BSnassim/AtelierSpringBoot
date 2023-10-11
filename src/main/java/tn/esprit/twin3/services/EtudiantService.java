@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class EtudiantService implements IEtudiantService{
     @Autowired
-    EtudiantRepository repo;
+    private EtudiantRepository repo;
     @Override
     public List<Etudiant> retrieveAllEtudiants() {
         return (repo.findAll().isEmpty()) ? null : repo.findAll();

@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class FoyerService implements IFoyerService{
     @Autowired
-    FoyerRepository repo;
+    private FoyerRepository repo;
     @Override
     public List<Foyer> retrieveAllFoyers() {
         return (repo.findAll().isEmpty()) ? null : repo.findAll();

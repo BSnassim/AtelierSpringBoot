@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class ReservationService implements IReservationService{
     @Autowired
-    ReservationRepository repo;
+    private ReservationRepository repo;
     @Override
     public List<Reservation> retrieveAllReservation() {
         return (repo.findAll().isEmpty()) ? null : repo.findAll();

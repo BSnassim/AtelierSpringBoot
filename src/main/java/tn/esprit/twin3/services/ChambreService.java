@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class ChambreService implements IChambreService{
     @Autowired
-    ChambreRepository repo;
+    private ChambreRepository repo;
     @Override
     public List<Chambre> retrieveAllChambres() {
         return (repo.findAll().isEmpty()) ? null : repo.findAll();

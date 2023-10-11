@@ -11,7 +11,7 @@ import java.util.List;
 public class BlocService implements IBlocService{
 
     @Autowired
-    BlocRepository repo;
+    private BlocRepository repo;
     @Override
     public List<Bloc> retrieveBlocs() {
         return (repo.findAll().isEmpty()) ? null : repo.findAll();
