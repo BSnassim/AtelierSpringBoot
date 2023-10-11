@@ -10,8 +10,7 @@ import java.util.List;
 @Entity
 public class Reservation {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idReservation;
+    private String idReservation;
     private Date anneeUniversitaire;
     private boolean estValide;
 
