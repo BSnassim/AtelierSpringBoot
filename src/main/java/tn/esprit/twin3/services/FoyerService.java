@@ -1,5 +1,6 @@
 package tn.esprit.twin3.services;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.twin3.entities.Foyer;
@@ -8,8 +9,9 @@ import tn.esprit.twin3.respositories.FoyerRepository;
 import java.util.List;
 
 @Service
+@AllArgsConstructor()
 public class FoyerService implements IFoyerService{
-    @Autowired
+
     private FoyerRepository repo;
     @Override
     public List<Foyer> retrieveAllFoyers() {

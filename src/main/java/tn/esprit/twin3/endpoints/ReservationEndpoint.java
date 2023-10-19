@@ -11,7 +11,6 @@ import java.util.List;
 @RestController
 public class ReservationEndpoint {
 
-    @Autowired
     IReservationService service;
 
     @GetMapping("")

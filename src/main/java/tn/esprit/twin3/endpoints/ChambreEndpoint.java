@@ -11,7 +11,6 @@ import java.util.List;
 @RestController
 public class ChambreEndpoint {
 
-    @Autowired
     IChambreService service;
 
     @GetMapping("")

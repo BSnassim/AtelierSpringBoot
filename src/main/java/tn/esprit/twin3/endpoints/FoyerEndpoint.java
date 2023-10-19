@@ -12,7 +12,6 @@ import java.util.List;
 @RestController
 public class FoyerEndpoint {
 
-    @Autowired
     IFoyerService service;
 
     @GetMapping("")

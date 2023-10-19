@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/universite")
 @RestController
 public class UniversiteEndpoint {
-    @Autowired
+
     private IUniversiteService service;
 
     @GetMapping("")

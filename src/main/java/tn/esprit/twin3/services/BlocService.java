@@ -1,5 +1,6 @@
 package tn.esprit.twin3.services;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.twin3.entities.Bloc;
@@ -8,9 +9,9 @@ import tn.esprit.twin3.respositories.BlocRepository;
 import java.util.List;
 
 @Service
+@AllArgsConstructor()
 public class BlocService implements IBlocService{
 
-    @Autowired
     private BlocRepository repo;
     @Override
     public List<Bloc> retrieveBlocs() {
