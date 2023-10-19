@@ -3,8 +3,10 @@ package tn.esprit.twin3.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.twin3.entities.Chambre;
+import tn.esprit.twin3.entities.Reservation;
 import tn.esprit.twin3.respositories.ChambreRepository;
 
+import java.sql.Date;
 import java.util.List;
 
 @Service
@@ -29,5 +31,15 @@ public class ChambreService implements IChambreService{
     @Override
     public Chambre retrieveChambre(long idChambre) {
         return repo.findById(idChambre).orElse(null);
+    }
+
+    @Override
+    public List<Chambre> getChambreByReservationAnneUniversitaire(Date debut, Date fin){
+        List<Chambre> chambres = null;
+        for(Chambre c : repo.findAll())
+            for(Reservation r: c.getReservations())
+                if (r.getAnneeUniversitaire().after(debut) && r.getAnneeUniversitaire().before(fin))
+                    chambres.add(c);
+        return chambres;
     }
 }

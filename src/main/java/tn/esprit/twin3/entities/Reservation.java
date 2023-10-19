@@ -11,12 +11,9 @@ import java.util.List;
 public class Reservation {
     @Id
     private String idReservation;
+    @Temporal(TemporalType.DATE)
     private Date anneeUniversitaire;
     private boolean estValide;
-
-    @ManyToOne
-    @JoinColumn(name = "chambre_id", referencedColumnName = "idChambre")
-    private Chambre chambre;
 
     @ManyToMany(mappedBy = "reservations")
     private List<Etudiant> etudiants;

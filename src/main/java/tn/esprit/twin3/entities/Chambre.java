@@ -3,6 +3,8 @@ package tn.esprit.twin3.entities;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @Entity
 public class Chambre {
@@ -17,5 +19,8 @@ public class Chambre {
     @ManyToOne
     @JoinColumn(name="bloc_id", referencedColumnName = "idBloc")
     private Bloc bloc;
+
+    @OneToMany
+    private List<Reservation> reservations;
 
 }
