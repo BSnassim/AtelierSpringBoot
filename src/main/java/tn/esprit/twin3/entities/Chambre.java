@@ -13,7 +13,7 @@ public class Chambre {
     private long idChambre;
     private long numeroChambre;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private TypeChambre typeC;
 
     @ManyToOne

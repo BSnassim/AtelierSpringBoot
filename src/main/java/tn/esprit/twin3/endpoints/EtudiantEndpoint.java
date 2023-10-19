@@ -1,5 +1,6 @@
 package tn.esprit.twin3.endpoints;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.twin3.entities.Etudiant;
@@ -9,11 +10,11 @@ import java.util.List;
 
 @RequestMapping("/etudiant")
 @RestController
+@AllArgsConstructor
 public class EtudiantEndpoint {
-
     IEtudiantService service;
 
-    @GetMapping("")
+    @GetMapping("/afficher")
     public List<Etudiant> findAllEtudiant(){
         return service.retrieveAllEtudiants();
     }

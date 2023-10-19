@@ -9,7 +9,7 @@ import tn.esprit.twin3.respositories.EtudiantRepository;
 import java.util.List;
 
 @Service
-@AllArgsConstructor()
+@AllArgsConstructor
 public class EtudiantService implements IEtudiantService{
 
     private EtudiantRepository repo;

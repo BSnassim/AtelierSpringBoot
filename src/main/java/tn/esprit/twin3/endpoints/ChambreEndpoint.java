@@ -1,5 +1,6 @@
 package tn.esprit.twin3.endpoints;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.twin3.entities.Chambre;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @RequestMapping("/chambre")
 @RestController
+@AllArgsConstructor
 public class ChambreEndpoint {
 
     IChambreService service;
