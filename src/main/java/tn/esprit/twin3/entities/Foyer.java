@@ -16,7 +16,6 @@ public class Foyer {
     private String nomFoyer;
     private long capaciteFoyer;
 
-    @OneToOne
-    @JoinColumn(name = "universite_id",referencedColumnName = "idUniversite")
+    @OneToOne(mappedBy = "foyer")
     private Universite universite;
 }

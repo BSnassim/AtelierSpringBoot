@@ -13,6 +13,5 @@ public class Universite {
     private String adresse;
 
     @OneToOne
-    @JoinColumn(name = "foyer_id", referencedColumnName = "idFoyer")
     private Foyer foyer;
 }
