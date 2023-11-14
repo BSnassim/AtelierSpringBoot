@@ -1,5 +1,7 @@
 package tn.esprit.twin3.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -12,6 +14,6 @@ public class Universite {
     private String nomUniversite;
     private String adresse;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Foyer foyer;
 }

@@ -1,5 +1,6 @@
 package tn.esprit.twin3.endpoints;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.websocket.server.PathParam;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,5 +34,11 @@ public class UniversiteEndpoint {
     @PutMapping("")
     public Universite updateUniversitiy(@RequestBody Universite u) {
         return service.updateUniversity(u);
+    }
+
+
+    @PutMapping("/affecterFoyer/{nomUniversite}/{idFoyer}")
+    public Universite affecterFoyerAUniversite(@PathVariable long idFoyer,@PathVariable String nomUniversite){
+        return service.affecterFoyerAUniversite(idFoyer, nomUniversite);
     }
 }
