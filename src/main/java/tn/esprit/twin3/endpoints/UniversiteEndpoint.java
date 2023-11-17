@@ -41,4 +41,9 @@ public class UniversiteEndpoint {
     public Universite affecterFoyerAUniversite(@PathVariable long idFoyer,@PathVariable String nomUniversite){
         return service.affecterFoyerAUniversite(idFoyer, nomUniversite);
     }
+
+    @PutMapping("/desaffecterFoyer/{idUniversite}")
+    public Universite desaffecterFoyerAUniversite(@PathVariable long idUniversite){
+        return service.desaffecterFoyerAUniversite(idUniversite);
+    }
 }
